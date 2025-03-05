@@ -1,5 +1,5 @@
 locals {
-  region = "us-east-1"
+  region = "ap-south-1"
   name   = "amazon-prime-cluster"
   vpc_cidr = "10.0.0.0/16"
   azs      = ["us-east-1a", "us-east-1b"]
@@ -12,5 +12,5 @@ locals {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-south-1"
 }
