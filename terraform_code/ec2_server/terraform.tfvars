@@ -1,12 +1,10 @@
-# DEFINE ALL YOUR VARIABLES HERE
-
-instance_type = "t2.medium"
-ami           = "ami-0e86e20dae9224db8"   # Ubuntu 24.04
+nstance_type = "t2.medium"
+ami           = "ami-0522ab6e1ddcc7055"   # Ubuntu 24.04
 key_name      = "devops-project"                     # Replace with your key-name without .pem extension
 volume_size   = 40
 region_name   = "ap-south-1"
 server_name   = "JENKINS-SERVER"
 
-# Note: 
+# Note:
 # a. First create a pem-key manually from the AWS console
 # b. Copy it in the same directory as your terraform code
