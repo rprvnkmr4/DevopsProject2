@@ -247,6 +247,15 @@ resource "aws_instance" "my-ec2" {
   }
 }  
 
+resource "aws_eip" "my-ec2-eip" {
+  vpc = true
+}
+
+resource "aws_eip_association" "example" {
+  instance_id   = aws_instance.my-ec2.id
+  allocation_id = aws_eip.my-ec2-eip.id
+}
+
 # STEP3: GET EC2 USER NAME AND PUBLIC IP 
 output "SERVER-SSH-ACCESS" {
   value = "ubuntu@${aws_instance.my-ec2.public_ip}"
